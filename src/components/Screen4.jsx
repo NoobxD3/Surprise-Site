@@ -5,9 +5,10 @@ import { motion } from "framer-motion"
 export default function Screen4({ onNext }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      // Y-axis ki animation hata di hai
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="flex flex-col items-center justify-center min-h-screen p-4 text-center"
     >
