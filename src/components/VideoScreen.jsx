@@ -11,8 +11,8 @@ export default function VideoScreen() {
       className="fixed inset-0 bg-black z-50 flex items-center justify-center p-4"
     >
       <img 
-        // Yahan .jpg istemal karein
-        src="/surprise-image.jpg" 
+        // Yahan .jpeg likha hai (e ke saath)
+        src="/surprise-image.jpeg" 
         alt="Surprise Mosaic Picture"
         className="w-full h-full object-contain" 
       />
