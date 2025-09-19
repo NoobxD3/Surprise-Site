@@ -5,9 +5,10 @@ import { motion } from "framer-motion"
 export default function Screen5({ onReveal }) {
   return (
     <motion.div
-      initial={{ opacity: 0, rotateY: 90 }}
-      animate={{ opacity: 1, rotateY: 0 }}
-      exit={{ opacity: 0, }}
+      // RotateY ki animation hata kar simple scale aur opacity laga di hai
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="flex flex-col items-center justify-center min-h-screen p-4 text-center"
     >
@@ -25,8 +26,9 @@ export default function Screen5({ onReveal }) {
       </motion.div>
 
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        // Y-axis ki animation hata kar scale laga diya hai
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
         className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight"
         style={{ textShadow: "0 0 20px rgba(168, 85, 247, 0.3)" }}
