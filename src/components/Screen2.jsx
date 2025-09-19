@@ -17,15 +17,17 @@ export default function Screen2({ onNext }) {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -100 }}
+        // X-axis ki animation hata di hai
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col items-center justify-center min-h-screen p-4 text-center"
       >
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          // Y-axis ki animation hata kar scale laga diya hai
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-relaxed"
           style={{ textShadow: "0 0 20px rgba(168, 85, 247, 0.3)" }}
@@ -34,8 +36,9 @@ export default function Screen2({ onNext }) {
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          // Y-axis ki animation hata kar scale laga diya hai
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="flex gap-8"
         >
@@ -65,7 +68,7 @@ export default function Screen2({ onNext }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-m flex items-center justify-center z-50 px-4"
+            className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 px-4"
             onClick={() => setShowPopup(false)}
           >
             <motion.div
