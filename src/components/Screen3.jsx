@@ -25,8 +25,9 @@ export default function Screen3({ onNext }) {
       </motion.div>
 
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        // Y-axis ki animation hata kar scale laga diya hai
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
         className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight"
         style={{ textShadow: "0 0 20px rgba(168, 85, 247, 0.3)" }}
