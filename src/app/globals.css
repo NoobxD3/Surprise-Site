@@ -28,3 +28,8 @@ body {
 button{
   cursor: pointer;
 }
+
+/* Mobile par blur text ko theek karne ke liye code */
+h1, h2, p, span {
+  transform: none !important;
+}
